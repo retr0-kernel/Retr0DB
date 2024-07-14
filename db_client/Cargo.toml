@@ -1,0 +1,11 @@
+[package]
+name = "db_client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+steeldb_core = { path = "../db_core" }
+
+[[bin]]
+name = "db_client"
+path = "src/main.rs"

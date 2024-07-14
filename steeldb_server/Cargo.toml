@@ -1,7 +1,0 @@
-[package]
-name = "steeldb_server"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-steeldb_core = { path = "../steeldb_core" }

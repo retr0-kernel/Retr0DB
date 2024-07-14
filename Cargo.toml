@@ -1,8 +1,8 @@
 [workspace]
 members = [
-    "steeldb_core",
-    "steeldb_client",
-    "steeldb_parser",
-    "steeldb_server",
+    "db_core",
+    "db_client",
+    "db_parser",
+    "db_server",
 ]
 resolver = "2"

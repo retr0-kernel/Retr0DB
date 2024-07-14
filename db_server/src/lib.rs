@@ -1,4 +1,4 @@
-use steeldb_core::Database;
+use db_core::Database;
 
 pub struct Server {
     database: Database,

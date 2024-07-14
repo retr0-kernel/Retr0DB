@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "steeldb_core"
+name = "db_parser"
 version = "0.1.0"

@@ -1,4 +1,9 @@
-use steeldb_core::Database;
+use db_core::Database;
+
+fn main() {
+    let mut repl = Repl::new();
+    repl.run();
+}
 
 pub struct Repl {
     buffer: String,
@@ -14,7 +19,6 @@ impl Repl {
     }
 
     pub fn run(&mut self) {
-        // Simple REPL loop
         loop {
             println!(">> ");
             let mut input = String::new();

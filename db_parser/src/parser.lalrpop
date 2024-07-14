@@ -1,0 +1,55 @@
+grammar;
+
+pub Command: () = {
+    <CreateTable> => {}
+    <Insert> => {}
+    <Select> => {}
+};
+
+CreateTable: () = {
+    "create" "table" <TableName> "(" <Columns> ")" => {}
+};
+
+Insert: () = {
+    "insert" "into" <TableName> "(" <ColumnNames> ")" "values" "(" <Values> ")" => {}
+};
+
+Select: () = {
+    "select" <ColumnNames> "from" <TableName> ";" => {}
+};
+
+TableName: String = {
+    <s:r#"[a-zA-Z_][a-zA-Z0-9_]*"#> => s.to_string()
+};
+
+Columns: () = {
+    <Column> => {}
+    Columns "," <Column> => {}
+};
+
+Column: () = {
+    <ColumnName> <ColumnType> => {}
+};
+
+ColumnName: String = {
+    <s:r#"[a-zA-Z_][a-zA-Z0-9_]*"#> => s.to_string()
+};
+
+ColumnType: () = {
+    "int" => {}
+    "string" => {}
+};
+
+ColumnNames: Vec<String> = {
+    <ColumnName> => vec![ColumnName]
+    ColumnNames "," <ColumnName> => {let mut vec = ColumnNames; vec.push(ColumnName); vec}
+};
+
+Values: Vec<String> = {
+    <Value> => vec![Value]
+    Values "," <Value> => {let mut vec = Values; vec.push(Value); vec}
+};
+
+Value: String = {
+    <s:r#"[a-zA-Z_][a-zA-Z0-9_]*"#> => s.to_string()
+};

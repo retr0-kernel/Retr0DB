@@ -1,9 +1,4 @@
-use steeldb_core::Database;
-
-fn main() {
-    let mut repl = Repl::new();
-    repl.run();
-}
+use db_core::Database;
 
 pub struct Repl {
     buffer: String,
