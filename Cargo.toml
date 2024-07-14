@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "steeldb_core",
+    "steeldb_client",
+    "steeldb_parser",
+    "steeldb_server",
+]
+resolver = "2"

@@ -1,0 +1,14 @@
+grammar;
+
+pub Select: Vec<String> = {
+    "select" <Columns> ";" => <>,
+};
+
+Columns: Vec<String> = {
+    <Column> => vec![<>],
+    <mut v:Columns> "," <e:Column> => { v.push(e); v }
+};
+
+Column: String = {
+    <s:r"[a-zA-Z_][a-zA-Z0-9_]*"> => s.to_string()
+};

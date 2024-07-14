@@ -1,0 +1,11 @@
+[package]
+name = "steeldb_client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+steeldb_core = { path = "../steeldb_core" }
+
+[[bin]]
+name = "steeldb_client"
+path = "src/main.rs"
