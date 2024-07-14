@@ -60,6 +60,32 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a81dae078cea95a014a339291cec439d2f232ebe854a9d672b796c6afafa9b7"
 
 [[package]]
+name = "db_client"
+version = "0.1.0"
+dependencies = [
+ "db_core",
+]
+
+[[package]]
+name = "db_core"
+version = "0.1.0"
+
+[[package]]
+name = "db_parser"
+version = "0.1.0"
+dependencies = [
+ "lalrpop",
+ "lalrpop-util",
+]
+
+[[package]]
+name = "db_server"
+version = "0.1.0"
+dependencies = [
+ "db_core",
+]
+
+[[package]]
 name = "diff"
 version = "0.1.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -391,32 +417,6 @@ name = "smallvec"
 version = "1.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3c5e1a9a646d36c3599cd173a41282daf47c44583ad367b8e6837255952e5c67"
-
-[[package]]
-name = "steeldb_client"
-version = "0.1.0"
-dependencies = [
- "steeldb_core",
-]
-
-[[package]]
-name = "steeldb_core"
-version = "0.1.0"
-
-[[package]]
-name = "steeldb_parser"
-version = "0.1.0"
-dependencies = [
- "lalrpop",
- "lalrpop-util",
-]
-
-[[package]]
-name = "steeldb_server"
-version = "0.1.0"
-dependencies = [
- "steeldb_core",
-]
 
 [[package]]
 name = "string_cache"

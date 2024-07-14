@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-steeldb_core = { path = "../db_core" }
+db_core = { path = "../db_core" }
 
 [[bin]]
 name = "db_client"

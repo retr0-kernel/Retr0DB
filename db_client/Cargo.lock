@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "steeldb_client"
+name = "db_client"
 version = "0.1.0"
