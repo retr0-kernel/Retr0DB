@@ -1,5 +1,7 @@
 # Retr0DB
 
+[Blog](https://medium.com/@krizzsrivastava/retr0db-building-a-database-in-rust-b223e2b98cbd)
+
 Retr0DB is a lightweight, Rust-based custom database designed for educational purposes and small-scale applications. It features a simple client-server architecture, allowing users to create tables, insert data, and query data through a basic REPL interface.
 
 ## Features
